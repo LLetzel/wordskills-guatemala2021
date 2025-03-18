@@ -1,0 +1,147 @@
+/* Reset */
+body {
+    font-family: Arial, sans-serif;
+    background: #EAECEB;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container Principal */
+.container {
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.back-btn, .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    margin: 10px 0;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.toggle {
+    display: none;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+/* Cores específicas */
+.dogs-tab {
+    background: #4F977A;
+}
+
+.cats-tab {
+    background: #C57350;
+}
+
+#dogs:checked + .dogs-tab {
+    background: #2F725A;
+}
+
+#cats:checked + .cats-tab {
+    background: #A85635;
+}
+
+/* Pets Containers */
+.pets-container {
+    position: relative;
+    min-height: 220px;
+}
+
+.pets {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#dogs:checked ~ .pets-container .dogs-content {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+#cats:checked ~ .pets-container .cats-content {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Cards dos Pets */
+.pet-card {
+    background: #B4D6C1;
+    width: 48%;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.cats-content .pet-card {
+    background: #D99B84;
+}
+
+/* Imagens dos Pets */
+.pet-img {
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+/* Informações */
+.pet-info {
+    margin-top: 5px;
+}
+
+.fav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 5px;
+}
