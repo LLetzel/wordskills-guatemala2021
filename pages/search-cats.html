@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Search</title>
+    <link rel="stylesheet" href="search-cats.css">
+</head>
+
+<body>
+    <header>
+        <a class="back-btn" href="index.html"><img src="../assets/icons/chevron-left.svg" alt=""></a>
+        <h2>Search</h2>
+        <label for="menu-toggle" class="menu-btn">
+            <img src="../assets/icons/menu-open.svg" alt="">
+        </label>
+    </header>
+
+    <!-- Checkbox para controle do menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <!-- Sobreposição escura -->
+    <label for="menu-toggle" class="overlay"></label>
+
+    <!-- Menu Sanduíche -->
+    <nav class="sidebar-menu">
+        <label for="menu-toggle" class="close-btn">×</label>
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="index.html"><img src="../assets/icons/fa-solid_home.svg" alt="Home"> Home</a></li>
+            <li><a href="search-dogs.html"><img src="../assets/icons/fa-solid_dog_white.svg" alt="Dogs"> Dogs</a></li>
+            <li><a href="search-cats.html"><img src="../assets/icons/fa-solid_cat_white.svg" alt="Cats"> Cats</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-bar">
+        <div class="search-container">
+            <img src="../assets/icons/search.svg" alt="Ícone de pesquisa">
+            <input type="text" placeholder="Woody">
+        </div>
+    </div>
+
+
+    <div class="categorias">
+        <a class="dogs" href="search-dogs.html">
+            <img src="../assets/icons/fa-solid_dog.svg" alt="Ícone de cachorro" id="dogicon">
+            <p>Dogs</p>
+        </a>
+
+        <a class="cats" href="search-cats.html">
+            <img src="../assets/icons/fa-solid_cat_white.svg" id="gatoicon" alt="Ícone de gato">
+            <p>Cats</p>
+        </a>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="containerimg">
+                <img src="../assets/imgcats/ariana.png" alt="Remi">
+            </div>
+            <div class="card-info">
+                <div class="informations">
+                    <h3>Ariana</h3>
+                    <p>Graycat</p>
+                </div>
+                <img id="casinha" src="../assets/icons/hearthome.svg" alt="Adotar">
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="containerimg">
+                <img src="../assets/imgcats/remi.png" alt="Remi">
+            </div>
+            <div class="card-info">
+                <div class="informations">
+                    <h3>Remi</h3>
+                    <p>WhiteCat</p>
+                </div>
+                <img id="casinha" src="../assets/icons/hearthome.svg" alt="Adotar">
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="containerimg">
+                <img src="../assets/imgcats/alex.png" alt="Alex">
+            </div>
+            <div class="card-info">
+                <div class="informations">
+                    <h3>Alex</h3>
+                    <p>Siamese</p>
+                </div>
+                <img id="casinha" src="../assets/icons/hearthome.svg" alt="Adotar">
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="containerimg">
+                <img src="../assets/imgcats/zoe.png" alt="Zoe">
+            </div>
+            <div class="card-info">
+                <div class="informations">
+                    <h3>Zoe</h3>
+                    <p>Persian</p>
+                </div>
+                <img id="casinha" src="../assets/icons/hearthome.svg" alt="Adotar">
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>

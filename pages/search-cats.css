@@ -1,0 +1,333 @@
+:root {
+    --primary-color: #c8daff;
+    --secondary-color: #2c4674;
+    --text-color: #FFFFFF;
+    --searchbackground1: #cbe0db;
+    --searchbackground2: #E8DBD4;
+    --searchprimary: #519E8A;
+    --searchsecondary: #d1723f;
+
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url(../assets/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    font-style: normal;
+    src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    font-style: normal;
+    src: url(../assets/fonts/Montserrat-Medium.ttf);
+}
+
+/* Reset */
+body {
+    font-family: 'Montserrat-Regular';
+    color: var(--secondary-color);
+    background: var(--searchbackground1);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    z-index: 0;
+}
+
+.overlay {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Estilização do Menu Sanduíche */
+.sidebar-menu {
+    font-family: 'Montserrat-Bold';
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.863);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Quando o menu está aberto */
+.menu-toggle:checked ~ .sidebar-menu {
+    right: 0;
+}
+
+/* Botão de fechar (X) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Título do menu */
+.sidebar-menu h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Lista do menu */
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    width: 90%;
+}
+
+/* Estilização dos itens do menu */
+.sidebar-menu ul li {
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+/* Estilização dos links */
+.sidebar-menu ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 100%;
+}
+
+/* Ícones dentro dos botões */
+.sidebar-menu ul li a img {
+    margin-right: 10px;
+}
+
+/* Cores dos botões */
+.sidebar-menu ul li:nth-child(1) a {
+    background: #2c4674; /* Azul escuro */
+}
+
+.sidebar-menu ul li:nth-child(2) a {
+    background: #519E8A; /* Verde */
+}
+
+.sidebar-menu ul li:nth-child(3) a {
+    background: #d1723f; /* Laranja */
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-container input {
+    font-family: 'Montserrat-Regular';
+    color: var(--secondary-color);
+    width: 90%;
+    height: 35px;
+    border-radius: 16px;
+    background-color: #dce6e3;
+    border: none;
+    padding-left: 40px; /* Espaço para o ícone */
+    font-size: 15px;
+}
+
+.search-container img {
+    position: absolute;
+    left: 10px; /* Ajuste conforme necessário */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+
+.categorias {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cats {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 35%;
+    height: 25px;
+    background: var(--searchsecondary);
+    color: var(--text-color);
+    font-family: 'Montserrat-Medium';
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dogs {
+    text-decoration: none;
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 35%;
+    height: 25px;
+    background: #dce6e3;
+    color: var(--secondary-color);
+    font-family: 'Montserrat-Medium';
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.dogs:hover {
+    transition: 1;
+    background-color: var(--searchprimary);
+    color: var(--text-color);
+    #dogicon{
+        transition: 0.5s;
+        transform: translateY(-10%);
+        content: url(../assets/icons/fa-solid_dog_white.svg);
+    }
+}
+
+
+h3 {
+    font-family: 'Montserrat-Bold';
+    font-size: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Garante 2 colunas */
+    gap: 15px; /* Espaço entre os cards */
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    height: 36vh;
+    background-color: var(--searchsecondary);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transition: 0.5s;
+    background-color: var(--text-color);
+    .card-info {
+        background-color: var(--searchsecondary);
+        .informations p, h3{
+            color: white;
+        }
+    }
+}
+
+.containerimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Alterado para ocupar todo o espaço */
+    height: 65%; /* Definindo altura para manter consistência */
+    overflow: hidden; /* Garante que imagens muito grandes não quebrem o layout */
+}
+
+.containerimg img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção e corta excesso para preencher o espaço */
+    border-radius: 15px 15px 0 0;
+}
+
+.card-info {
+    background: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    border-radius: 0 0 20px 20px;
+}
+
+
+.informations h3 {
+    font-family: 'Montserrat-Bold';
+    color: var(--secondary-color);
+    margin: 5px 5px;
+}
+
+.informations p {
+    font-family: 'Montserrat-Medium';
+    color: gray;
+    font-size: 14px;
+    margin: 5px 5px;
+}
+
+#casinha {
+    padding: 10px;
+    width: 25px;
+}
+
+#casinha:hover {
+    content: url(../assets/icons/hearthome-white.svg);
+}

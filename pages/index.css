@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #c8daff;
+    --secondary-color: #2c4674;
+    --text-color: #FFFFFF;
+    --searchbackground1: #cbe0db;
+    --searchbackground2: #E8DBD4;
+    --searchprimary: #519E8A;
+    --searchsecondary: #d1723f;
+
+}
+
 @font-face {
     font-family: 'Montserrat-Bold';
     font-style: normal;
@@ -32,7 +43,7 @@ body {
     width: 100vw;
     height: 100vh;
     border-radius: 0;
-    background: linear-gradient(180deg, rgb(170, 235, 248) 0%, rgb(14, 14, 119) 100%);
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     overflow: hidden;
 }
 
@@ -69,12 +80,12 @@ body {
 
 #slide1:checked ~ .content .dots label:nth-child(1),
 #slide2:checked ~ .content .dots label:nth-child(2) {
-    background: rgba(9, 9, 121, 1);
+    background: var(--secondary-color);
 }
 
 h1 {
     font-family: 'Montserrat-Regular';
-    color: rgba(9, 9, 121, 1);
+    color: var(--secondary-color);
     font-size: 52px;
     margin-top: 70px;
     margin-bottom: 8px;
