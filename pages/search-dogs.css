@@ -79,6 +79,10 @@ header {
     visibility: visible;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* Estilização do Menu Sanduíche */
 .sidebar-menu {

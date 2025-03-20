@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #c8daff;
+    --secondary-color: #2c4674;
+    --text-color: #FFFFFF;
+    --searchbackground1: #cbe0db;
+    --searchbackground2: #E8DBD4;
+    --searchsecondary: #519E8A;
+    --searchsecondary: #d1723f;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url(../assets/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    font-style: normal;
+    src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    font-style: normal;
+    src: url(../assets/fonts/Montserrat-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat-Regular', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 414px;
+    background: var(--searchbackground2);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    background: var(--searchsecondary);
+    margin-bottom: 20px;
+    border-radius: 30px 30px 30px 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+span {
+    font-family: 'Montserrat-Bold';
+    color: var(--secondary-color);
+}
+
+strong {
+    font-family: 'Montserrat-Bold';
+    color: var(--secondary-color);
+}
+
+h2 {
+    font-family: 'Montserrat-Bold';
+    color: var(--secondary-color);
+}
+
+p {
+    color: var(--secondary-color);
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+}
+
+.info div {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.details h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+.details p {
+    color: gray;
+    font-size: 14px;
+}
+
+.owner {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0 20px;
+}
+
+.owner img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.button {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.button button {
+    background: var(--searchsecondary);
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 2s ease-out; /* Aumentei a duração e usei ease-out */
+}
+
+.button:hover{
+    transform: translateX(-2px) scale(1.05); /* Move para a esquerda e cresce 10% */
+}
+
+.back-button {
+    z-index: 1;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Adiciona transição suave */
+}
+
+.back-button:hover {
+    transform: translateX(-5px); /* Move o botão 5px para a esquerda */
+}
+
+.back-button img {
+    width: 30px;
+    height: 30px;
+}

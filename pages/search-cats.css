@@ -32,7 +32,7 @@
 .app {
     font-family: 'Montserrat-Regular';
     color: var(--secondary-color);
-    background: var(--searchbackground1);
+    background: var(--searchbackground2);
     margin: 0;
     padding: 0;
     width: 414px;
@@ -77,6 +77,10 @@ header {
 .menu-toggle:checked ~ .overlay {
     opacity: 1;
     visibility: visible;
+}
+
+a {
+    text-decoration: none;
 }
 
 
